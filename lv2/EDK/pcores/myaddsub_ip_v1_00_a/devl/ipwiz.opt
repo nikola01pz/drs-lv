@@ -1,0 +1,9 @@
+-batch 
+-create myaddsub_ip 
+-ver 1.00.a 
+-dir "D:\DRS\LV2_Milicevic_Istvanic\EDK" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 1 
+-xps 
+-driver 

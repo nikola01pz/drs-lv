@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          D:\DRS\LV2_Milicevic_Istvanic\EDK/drivers/myaddsub_ip_v1_00_a/data/myaddsub_ip_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Thu Oct 26 09:54:07 2023 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER myaddsub_ip
+
+  OPTION supported_peripherals = (myaddsub_ip);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

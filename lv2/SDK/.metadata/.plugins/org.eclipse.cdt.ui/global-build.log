@@ -1,0 +1,2226 @@
+08:02:41 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:02:49 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:11:31 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:11:32 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:11:39 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:11:39 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:12:02 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:12:03 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:12:10 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:14:46 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:14:46 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:15:19 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:15:38 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:15:38 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:20:07 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:20:31 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:21:00 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:8: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:21:18 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:4:2: error: invalid preprocessing directive #unclude
+make: *** [src/main.o] Greška 1
+08:21:22 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:9: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:22:40 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:6: error: 'BASEADDR' undeclared (first use in this function)
+../src/main.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:26:5: error: expected ';' before '}' token
+make: *** [src/main.o] Greška 1
+08:22:45 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:6: error: 'BASEADDR' undeclared (first use in this function)
+../src/main.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Greška 1
+08:23:02 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:6: error: 'BaseAddress' undeclared (first use in this function)
+../src/main.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Greška 1
+08:23:26 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:9: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:23:38 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:9: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:23:48 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:8: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:23:50 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main.c:9: multiple definition of `main'
+./src/helloworld.o:D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/helloworld.c:40: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+08:24:00 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/main.o ./src/platform.o  ./src/helloworld.d ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:24:00 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5794	    308	   2098	   8200	   2008	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:29:42 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:31:15 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:31:15 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:32:33 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:32:33 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:33:04 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:33:04 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:34:08 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:34:09 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:34:50 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:34:51 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:37:06 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5802	    308	   2098	   8208	   2010	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:37:46 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:37:46 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:37:47 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:37:54 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5802	    308	   2098	   8208	   2010	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:38:58 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5778	    308	   2098	   8184	   1ff8	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:39:40 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:39:40 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:39:57 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:39:57 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:39:57 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:40:05 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5778	    308	   2098	   8184	   1ff8	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:40:56 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5830	    308	   2092	   8230	   2026	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:41:14 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:41:14 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+make: Ništa za napraviti za `all'.
+08:41:20 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:41:21 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:41:21 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:41:29 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5830	    308	   2092	   8230	   2026	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:42:07 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:42:07 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:42:08 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+In file included from myled_ip.c:11:0:
+myled_ip.h:119:25: error: macro parameters must be comma-separated
+In file included from myled_ip_selftest.c:11:0:
+myled_ip.h:119:25: error: macro parameters must be comma-separated
+make[1]: *** [libs] Greška 1
+"Compiling cpu"
+ERROR:EDK:369 -  make failed for target "libs" 
+ERROR:EDK:3418 - Error(s) while running make.
+make: *** [microblaze_0/lib/libxil.a] Greška 2
+make: Meta `all' nije ponovo izraðen zbog grešaka.
+08:42:15 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../../lv2_bsp/microblaze_0/include/myled_ip.h:119:25: error: macro parameters must be comma-separated
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+make: *** [src/main.o] Greška 1
+08:42:48 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../../lv2_bsp/microblaze_0/include/myled_ip.h:119:25: error: macro parameters must be comma-separated
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+../src/main.c:24:18: error: expected expression before '%' token
+make: *** [src/main.o] Greška 1
+08:42:53 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../../lv2_bsp/microblaze_0/include/myled_ip.h:119:25: error: macro parameters must be comma-separated
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+../src/main.c:24:18: error: expected expression before '%' token
+make: *** [src/main.o] Greška 1
+08:42:57 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../../lv2_bsp/microblaze_0/include/myled_ip.h:119:25: error: macro parameters must be comma-separated
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: implicit declaration of function 'SetLEDValue' [-Wimplicit-function-declaration]
+make: *** [src/main.o] Greška 1
+08:44:01 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:44:02 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:44:02 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:44:10 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: passing argument 1 of 'SetLEDValue' makes integer from pointer without a cast [enabled by default]
+../../lv2_bsp/microblaze_0/include/myled_ip.h:121:6: note: expected 'int' but argument is of type 'int *'
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5830	    308	   2092	   8230	   2026	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:44:53 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5818	    308	   2098	   8224	   2020	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:45:08 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:48:10 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:50:24 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:51:34 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:54:13 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:54:30 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:54:45 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5802	    308	   2098	   8208	   2010	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:54:59 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:55:38 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5794	    308	   2098	   8200	   2008	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:55:47 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:56:10 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5794	    308	   2098	   8200	   2008	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:56:38 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:57:05 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5818	    308	   2098	   8224	   2020	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:57:56 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+08:59:10 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+08:59:11 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:59:11 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:59:19 **** Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5810	    308	   2098	   8216	   2018	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+08:59:28 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:30:04 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:31:21 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+09:31:22 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling mydataseparator_ip"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+09:31:30 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+09:31:31 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5810	    308	   2098	   8216	   2018	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:32:01 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+09:32:01 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+09:32:38 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+09:33:00 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:27:6: error: 'XPAR_MYLED_IP_0_BASEADDR' undeclared (first use in this function)
+../src/main2.c:27:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main2.o] Greška 1
+09:33:18 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:28:6: error: 'XPAR_MYLED_IP_0_BASEADDR' undeclared (first use in this function)
+../src/main2.c:28:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main2.o] Greška 1
+09:35:04 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:29:6: error: 'BaseAddress' undeclared (first use in this function)
+../src/main2.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:29:6: error: 'RegOffset' undeclared (first use in this function)
+../src/main2.c:29:6: error: 'Data' undeclared (first use in this function)
+../src/main2.c:30:5: error: expected ';' before '}' token
+make: *** [src/main2.o] Greška 1
+09:35:13 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:29:6: error: 'RegOffset' undeclared (first use in this function)
+../src/main2.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:29:6: error: 'Data' undeclared (first use in this function)
+../src/main2.c:30:5: error: expected ';' before '}' token
+make: *** [src/main2.o] Greška 1
+09:35:19 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:29:6: error: 'Data' undeclared (first use in this function)
+../src/main2.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:30:5: error: expected ';' before '}' token
+make: *** [src/main2.o] Greška 1
+09:35:31 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:30:5: error: expected ';' before '}' token
+make: *** [src/main2.o] Greška 1
+09:35:34 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5810	    308	   2098	   8216	   2018	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:35:59 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:36:17 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5810	    308	   2098	   8216	   2018	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:37:00 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:39:16 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:15:9: warning: unused variable 'buttonsValue' [-Wunused-variable]
+../src/main2.c:14:11: warning: unused variable 'buttons' [-Wunused-variable]
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5810	    308	   2098	   8216	   2018	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:39:34 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:15:9: warning: unused variable 'buttonsValue' [-Wunused-variable]
+../src/main2.c:14:11: warning: unused variable 'buttons' [-Wunused-variable]
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5862	    308	   2092	   8262	   2046	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:39:58 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:20:32: error: 'XPAR_PUSH_DEVICE_ID' undeclared (first use in this function)
+../src/main2.c:20:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:15:9: warning: unused variable 'buttonsValue' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:40:12 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:20:32: error: 'XPAR_PUSH_DEVICE_ID' undeclared (first use in this function)
+../src/main2.c:20:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:15:9: warning: unused variable 'buttonsValue' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:41:22 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:20:32: error: 'XPAR_PUSH_DEVICE_ID' undeclared (first use in this function)
+../src/main2.c:20:32: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:15:9: warning: variable 'buttonsValue' set but not used [-Wunused-but-set-variable]
+make: *** [src/main2.o] Greška 1
+09:42:59 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:15:9: warning: variable 'buttonsValue' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5894	    308	   2092	   8294	   2066	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:45:49 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5906	    308	   2098	   8312	   2078	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:45:58 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:46:32 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5906	    308	   2098	   8312	   2078	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:46:53 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5974	    308	   2092	   8374	   20b6	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:47:01 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:47:50 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:37:66: error: invalid suffix "bbuttonsValue" on integer constant
+make: *** [src/main2.o] Greška 1
+09:47:56 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5974	    308	   2092	   8374	   20b6	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:48:19 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6002	    308	   2098	   8408	   20d8	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:48:23 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5990	    308	   2092	   8390	   20c6	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:48:32 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:49:01 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5982	    308	   2092	   8382	   20be	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:49:09 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:50:53 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5986	    308	   2098	   8392	   20c8	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:51:01 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+09:51:14 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5990	    308	   2092	   8390	   20c6	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+09:51:22 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+10:09:52 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+10:10:08 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main2.o ./src/platform.o  ./src/main2.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+10:10:08 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+10:10:15 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+'Finished building: ../src/main3.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main3.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+10:11:43 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+../src/main3.c:5:25: fatal error: myaddsub_ip.h: No such file or directory
+compilation terminated.
+make: *** [src/main3.o] Greška 1
+10:12:14 **** Clean-only build of project lv2_bsp ****
+make -k clean 
+rm -rf microblaze_0
+10:12:14 **** Build of project lv2_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       -lp ../../EDK\
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -lp ../../EDK -pe
+microblaze_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling myaddsub_ip"
+"Compiling mydataseparator_ip"
+"Compiling myled_ip"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+10:12:23 **** Clean-only build of configuration Debug for project lv2 ****
+make clean 
+rm -rf  ./src/main3.o ./src/platform.o  ./src/main3.d ./src/platform.d  lv2.elf.size  lv2.elf.elfcheck  lv2.elf
+' '
+10:12:23 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+../src/main3.c: In function 'main':
+../src/main3.c:38:6: warning: implicit declaration of function 'MYDATASEPARATOR_IP_mWriteReg' [-Wimplicit-function-declaration]
+'Finished building: ../src/main3.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main3.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main3.o: In function `main':
+D:\DRS\LV2_Milicevic_Istvanic\SDK\lv2\Debug/../src/main3.c:38: undefined reference to `MYDATASEPARATOR_IP_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [lv2.elf] Greška 1
+10:14:53 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+../src/main3.c: In function 'main':
+../src/main3.c:34:6: error: 'BaseAddress' undeclared (first use in this function)
+../src/main3.c:34:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main3.c:34:6: error: 'RegOffset' undeclared (first use in this function)
+../src/main3.c:34:6: error: 'Data' undeclared (first use in this function)
+../src/main3.c:35:5: error: expected ';' before '}' token
+../src/main3.c:18:9: warning: variable 'second' set but not used [-Wunused-but-set-variable]
+../src/main3.c:17:9: warning: variable 'first' set but not used [-Wunused-but-set-variable]
+make: *** [src/main3.o] Greška 1
+10:15:19 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+../src/main3.c: In function 'main':
+../src/main3.c:33:6: error: 'BaseAddress' undeclared (first use in this function)
+../src/main3.c:33:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main3.c:33:6: error: 'RegOffset' undeclared (first use in this function)
+make: *** [src/main3.o] Greška 1
+10:15:43 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+../src/main3.c: In function 'main':
+../src/main3.c:33:6: error: 'RegOffset' undeclared (first use in this function)
+../src/main3.c:33:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main3.o] Greška 1
+10:15:48 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+'Finished building: ../src/main3.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main3.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5854	    308	   2092	   8254	   203e	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+10:15:58 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+10:18:23 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+'Finished building: ../src/main3.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main3.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6170	    308	   2098	   8576	   2180	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+10:18:33 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'
+10:20:11 **** Auto Build of configuration Debug for project lv2 ****
+make all 
+'Building file: ../src/main3.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv2_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main3.d" -MT"src/main3.d" -o "src/main3.o" "../src/main3.c"
+'Finished building: ../src/main3.c'
+' '
+'Building target: lv2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv2_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv2.elf"  ./src/main3.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv2.elf  |tee "lv2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5854	    308	   2092	   8254	   203e	lv2.elf
+'Finished building: lv2.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv2.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv2.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv2.elf 
+
+ELF file	: lv2.elf
+elfcheck passed.
+'Finished building: lv2.elf.elfcheck'
+' '
+10:20:20 **** Auto Build of project lv2_bsp ****
+make -k all 
+'Finished building libraries'

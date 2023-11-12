@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          D:/DRS/LV2_Milicevic_Istvanic/EDK/pcores/myled_ip_v1_00_a/data/myled_ip_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Thu Oct 26 07:34:23 2023 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib myled_ip_v1_00_a user_logic vhdl
+lib myled_ip_v1_00_a myled_ip vhdl

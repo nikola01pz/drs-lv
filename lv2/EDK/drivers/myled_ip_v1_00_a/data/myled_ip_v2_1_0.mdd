@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          D:\DRS\LV2_Milicevic_Istvanic\EDK/drivers/myled_ip_v1_00_a/data/myled_ip_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Thu Oct 26 07:34:24 2023 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER myled_ip
+
+  OPTION supported_peripherals = (myled_ip);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

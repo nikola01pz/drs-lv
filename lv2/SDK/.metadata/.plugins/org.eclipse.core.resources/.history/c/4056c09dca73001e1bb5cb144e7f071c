@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "myled_ip.h"
+
+void print(char *str);
+
+int main()
+{
+    XGpio switches;
+    int switchesValue;
+
+    XGpio_Initialize(&switches, XPAR_DIP_SWITCHES_8BITS_DEVICE_ID);
+    XGpio_SetDataDirection(&switches, 1, 0xffffffff);
+
+    while(1)
+    {
+    	switchesValue = XGpio_DiscreteRead(&switches, 1);
+    	xil_printf("Stanje sklopki je 0x%x hex / %d dec\r\n",switchesValue, switchesValue);
+
+		//***********************************************TO DO*************************************************//
+		//****************Vrijednost sklopki prosljediti na LE diode razvojnog sustava*************************//
+    	// MYLED_IP_mWriteReg(0xC3600000,0, &switchesValue);
+
+		//*****************************************************************************************************//
+    }
+
+    return 0;
+}

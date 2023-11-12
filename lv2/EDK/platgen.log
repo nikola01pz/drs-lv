@@ -1,0 +1,306 @@
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc6slx16csg324-3 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+WARNING:EDK - INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable
+   is set to '2100@lm.etfos.hr;c:\SW\Xilinx\Xilinx.lic'.
+   INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+   INFO:Security:71 - If a license for part 'xc6slx16' is available, it will be
+   possible to use 'XPS_TDP' instead of 'XPS'.
+   WARNING:Security:43 - No license file was found in the standard Xilinx
+   license directory.
+   WARNING:Security:44 - Since no license file was found,
+          please run the Xilinx License Configuration Manager
+          (xlcm or "Manage Xilinx Licenses")
+          to assist in obtaining a license.
+   WARNING:Security:42 - Your software subscription period has lapsed. Your
+   current version of Xilinx tools will continue to function, but you no longer
+   qualify for Xilinx software updates or new releases.
+
+
+Parse D:/DRS/LV2_Milicevic_Istvanic/EDK/system.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   ilmb_cntlr:BRAM_Clk_A. Clock DRCs will not be performed on this core and
+   cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   dlmb_cntlr:BRAM_Clk_A. Clock DRCs will not be performed on this core and
+   cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00007fff) dlmb_cntlr	dlmb
+  (0000000000-0x00007fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) Push_Buttons_4Bits	mb_plb
+  (0x81420000-0x8142ffff) DIP_Switches_8Bits	mb_plb
+  (0x84000000-0x8400ffff) RS232_Uart_1	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+  (0xc3600000-0xc360ffff) myled	mb_plb
+  (0xc5000000-0xc500ffff) myaddsub	mb_plb
+  (0xcde00000-0xcde0ffff) mydataseparator	mb_plb
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 79 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 7 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 80 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_MID_WIDTH value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_DWIDTH value to 32 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 83 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:ilmb - tool is overriding PARAMETER
+   C_LMB_NUM_SLAVES value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
+   \lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:dlmb - tool is overriding PARAMETER
+   C_LMB_NUM_SLAVES value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_v10_v2_00_b\data
+   \lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:lmb_bram - tool is overriding
+   PARAMETER C_MEMSIZE value to 0x8000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 78 
+INFO:EDK:4130 - IPNAME: xps_uartlite, INSTANCE:RS232_Uart_1 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_02_a
+   \data\xps_uartlite_v2_1_0.mpd line 84 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:DIP_Switches_8Bits - tool is
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Push_Buttons_4Bits - tool is
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
+   _v2_1_0.mpd line 118 
+INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_10_a\data\mdm
+   _v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: myled_ip, INSTANCE:myled - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 32 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myled_ip_v1_00_a\data\myled_ip_v2_1_
+   0.mpd line 25 
+INFO:EDK:4130 - IPNAME: myled_ip, INSTANCE:myled - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myled_ip_v1_00_a\data\myled_ip_v2_1_
+   0.mpd line 26 
+INFO:EDK:4130 - IPNAME: myled_ip, INSTANCE:myled - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myled_ip_v1_00_a\data\myled_ip_v2_1_
+   0.mpd line 27 
+INFO:EDK:4130 - IPNAME: mydataseparator_ip, INSTANCE:mydataseparator - tool is
+   overriding PARAMETER C_SPLB_DWIDTH value to 32 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\mydataseparator_ip_v1_00_a\data\myda
+   taseparator_ip_v2_1_0.mpd line 25 
+INFO:EDK:4130 - IPNAME: mydataseparator_ip, INSTANCE:mydataseparator - tool is
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\mydataseparator_ip_v1_00_a\data\myda
+   taseparator_ip_v2_1_0.mpd line 26 
+INFO:EDK:4130 - IPNAME: mydataseparator_ip, INSTANCE:mydataseparator - tool is
+   overriding PARAMETER C_SPLB_MID_WIDTH value to 1 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\mydataseparator_ip_v1_00_a\data\myda
+   taseparator_ip_v2_1_0.mpd line 27 
+INFO:EDK:4130 - IPNAME: myaddsub_ip, INSTANCE:myaddsub - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 32 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myaddsub_ip_v1_00_a\data\myaddsub_ip
+   _v2_1_0.mpd line 25 
+INFO:EDK:4130 - IPNAME: myaddsub_ip, INSTANCE:myaddsub - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myaddsub_ip_v1_00_a\data\myaddsub_ip
+   _v2_1_0.mpd line 26 
+INFO:EDK:4130 - IPNAME: myaddsub_ip, INSTANCE:myaddsub - tool is overriding
+   PARAMETER C_SPLB_MID_WIDTH value to 1 -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\pcores\myaddsub_ip_v1_00_a\data\myaddsub_ip
+   _v2_1_0.mpd line 27 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 7 slave(s) 
+IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
+   floating connection - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 196 
+WARNING:EDK:4181 - PORT: LED, CONNECTOR: myled_LED - floating connection -
+   D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 205 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_PLB value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 233 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_I_PLB value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 236 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 0 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\microblaze_v8_50_c\d
+   ata\microblaze_v2_1_0.mpd line 403 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:dlmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:ilmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\lmb_bram_if_cntlr_v3
+   _10_c\data\lmb_bram_if_cntlr_v2_1_0.mpd line 92 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: The microblaze_0 core has constraints automatically generated by XPS in
+implementation/microblaze_0_wrapper/microblaze_0_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The ilmb core has constraints automatically generated by XPS in
+implementation/ilmb_wrapper/ilmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The dlmb core has constraints automatically generated by XPS in
+implementation/dlmb_wrapper/dlmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+IPNAME:microblaze INSTANCE:microblaze_0 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 43 - Copying cache
+implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line
+63 - Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:dlmb - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line
+70 - Copying cache implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 77 - Copying cache
+implementation netlist
+IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 86 - Copying cache
+implementation netlist
+IPNAME:bram_block INSTANCE:lmb_bram -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 95 - Copying cache
+implementation netlist
+IPNAME:xps_uartlite INSTANCE:rs232_uart_1 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 102 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:dip_switches_8bits -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 116 - Copying cache
+implementation netlist
+IPNAME:xps_gpio INSTANCE:push_buttons_4bits -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 129 - Copying cache
+implementation netlist
+IPNAME:mem_bus_mux INSTANCE:mem_bus_mux_0 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 142 - Copying cache
+implementation netlist
+IPNAME:mdm INSTANCE:mdm_0 - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line
+174 - Copying cache implementation netlist
+IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 186 - Copying cache
+implementation netlist
+IPNAME:myled_ip INSTANCE:myled - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs
+line 199 - Copying cache implementation netlist
+IPNAME:mydataseparator_ip INSTANCE:mydataseparator -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 208 - Copying cache
+implementation netlist
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:lmb_bram -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 95 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 159 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:mb_plb - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 56 - Running
+XST synthesis
+INSTANCE:clock_generator_0 - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line
+159 - Running XST synthesis
+INSTANCE:myaddsub - D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 218 -
+Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+D:\DRS\LV2_Milicevic_Istvanic\EDK\system.mhs line 159 - Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 33.00 seconds
