@@ -1,0 +1,978 @@
+06:44:39 **** Build of project lv1_app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+06:44:47 **** Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+06:45:33 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2218	    268	   2090	   4576	   11e0	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+06:49:42 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+06:50:53 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+06:59:11 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5974	    292	   2092	   8358	   20a6	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+07:01:37 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+07:18:35 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+07:21:24 **** Clean-only build of project lv1_app_bsp ****
+make -k clean 
+rm -rf microblaze_0
+07:21:25 **** Build of project lv1_app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+07:21:32 **** Clean-only build of configuration Debug for project lv1_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lv1_app.elf.size  lv1_app.elf.elfcheck  lv1_app.elf
+' '
+07:21:32 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5998	    308	   2092	   8398	   20ce	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+07:52:01 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+07:52:10 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:52:13 **** Clean-only build of project lv1_app_bsp ****
+make -k clean 
+rm -rf microblaze_0
+07:52:13 **** Clean-only build of configuration Debug for project lv1_app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  lv1_app.elf.size  lv1_app.elf.elfcheck  lv1_app.elf
+' '
+07:52:14 **** Build of project lv1_app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+07:52:21 **** Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5998	    308	   2092	   8398	   20ce	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+07:53:55 **** Build of project led ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:03:25 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:04:22 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:04:44 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:05:00 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:05:25 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:05:37 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:29: error: invalid operands to binary | (have 'struct XGpio *' and 'int')
+../src/helloworld.c:55:3: error: too few arguments to function 'XGpio_DiscreteWrite'
+../../lv1_app_bsp/microblaze_0/include/xgpio.h:174:6: note: declared here
+make: *** [src/helloworld.o] Greška 1
+08:05:44 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:07:34 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:08:49 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:09:17 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:09:31 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:11:08 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:11:15 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:29: error: invalid operands to binary | (have 'struct XGpio *' and 'int')
+../src/helloworld.c:55:3: error: too few arguments to function 'XGpio_DiscreteWrite'
+../../lv1_app_bsp/microblaze_0/include/xgpio.h:174:6: note: declared here
+make: *** [src/helloworld.o] Greška 1
+08:11:29 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:29: error: invalid operands to binary | (have 'int *' and 'int')
+../src/helloworld.c:55:3: error: too few arguments to function 'XGpio_DiscreteWrite'
+../../lv1_app_bsp/microblaze_0/include/xgpio.h:174:6: note: declared here
+make: *** [src/helloworld.o] Greška 1
+08:11:40 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:29: error: invalid operands to binary | (have 'int *' and 'int')
+../src/helloworld.c:55:3: error: too few arguments to function 'XGpio_DiscreteWrite'
+../../lv1_app_bsp/microblaze_0/include/xgpio.h:174:6: note: declared here
+make: *** [src/helloworld.o] Greška 1
+08:11:59 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:29: error: invalid operands to binary | (have 'struct XGpio *' and 'int')
+../src/helloworld.c:55:3: error: too few arguments to function 'XGpio_DiscreteWrite'
+../../lv1_app_bsp/microblaze_0/include/xgpio.h:174:6: note: declared here
+make: *** [src/helloworld.o] Greška 1
+08:13:11 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:51:26: error: 'led_GPIO_IO_pin' undeclared (first use in this function)
+../src/helloworld.c:51:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Greška 1
+08:13:18 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6246	    308	   2092	   8646	   21c6	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:13:27 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:13:52 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:14:28 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:15:05 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:17:02 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6246	    308	   2092	   8646	   21c6	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:17:12 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:17:51 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:18:05 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:8: warning: unused variable 'leds' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5998	    308	   2092	   8398	   20ce	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:18:15 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:19:40 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:51:26: error: 'led_GPIO_IO_pin' undeclared (first use in this function)
+../src/helloworld.c:51:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Greška 1
+08:23:18 **** Clean-only build of project lv1_app_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:23:19 **** Build of project lv1_app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:23:26 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:51:26: error: 'led_GPIO_IO_pin' undeclared (first use in this function)
+../src/helloworld.c:51:26: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Greška 1
+08:23:58 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6330	    324	   2098	   8752	   2230	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:24:08 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6330	    324	   2098	   8752	   2230	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:24:24 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:25:55 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:3: error: 'switchesValue' undeclared (first use in this function)
+../src/helloworld.c:57:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:57:39: error: 'switches' undeclared (first use in this function)
+../src/helloworld.c:45:6: warning: unused variable 'buttonsValue' [-Wunused-variable]
+make: *** [src/helloworld.o] Greška 1
+08:26:24 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6330	    324	   2098	   8752	   2230	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:26:35 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:26:51 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6334	    324	   2092	   8750	   222e	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:26:59 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:28:42 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: 'buttonsValue' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2946	    320	   2094	   5360	   14f0	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:28:49 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:29:13 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3222	    320	   2088	   5630	   15fe	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:29:20 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:31:07 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:8: error: 'i' undeclared (first use in this function)
+../src/helloworld.c:61:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:61:25: error: expected ';' before ':' token
+../src/helloworld.c:63:3: error: expected expression before '}' token
+make: *** [src/helloworld.o] Greška 1
+08:31:18 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:8: error: 'i' undeclared (first use in this function)
+../src/helloworld.c:61:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:61:25: error: expected ';' before ':' token
+make: *** [src/helloworld.o] Greška 1
+08:31:23 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3342	    320	   2088	   5750	   1676	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:31:25 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3342	    320	   2088	   5750	   1676	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:31:32 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'
+08:31:46 **** Auto Build of configuration Debug for project lv1_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv1_app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: lv1_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv1_app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv1_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv1_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv1_app.elf  |tee "lv1_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3342	    320	   2088	   5750	   1676	lv1_app.elf
+'Finished building: lv1_app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv1_app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv1_app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv1_app.elf 
+
+ELF file	: lv1_app.elf
+elfcheck passed.
+'Finished building: lv1_app.elf.elfcheck'
+' '
+08:31:53 **** Auto Build of project lv1_app_bsp ****
+make -k all 
+'Finished building libraries'

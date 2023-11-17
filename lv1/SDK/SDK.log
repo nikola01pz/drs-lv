@@ -1,0 +1,62 @@
+06:43:57.199 INFO  - Processing command line option -hwspec D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+06:47:25.862 ERROR - Unexpected error while obtaining referenced S/W project {} org.eclipse.core.internal.resources.ResourceException: Resource '/RemoteSystemsTempFiles' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:150)
+	at org.eclipse.core.internal.resources.Project.getReferencedProjects(Project.java:521)
+
+06:49:41.717 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+06:50:53.025 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+06:59:48.119 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+07:01:18.777 INFO  - Processing command line option -hwspec D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+07:01:36.879 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+07:18:20.299 INFO  - Project EDK_hw_platform's source hardware specification located at D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+07:18:35.517 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml into \EDK_hw_platform\system.xml. 
+07:18:35.517 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.bit into \EDK_hw_platform\system.bit. 
+07:18:35.517 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system_bd.bmm into \EDK_hw_platform\system_bd.bmm. 
+07:18:35.611 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+07:18:37.579 INFO  - Updating hardware inferred compiler options for lv1_app. 
+07:18:37.595 INFO  - Clearing existing target manager status. 
+07:20:46.399 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+07:21:02.315 INFO  - Processing command line option -hwspec D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+07:21:24.573 INFO  - Settings changed on project lv1_app_bsp. Triggering a rebuild... 
+07:21:25.183 INFO  - Refreshed build settings on project lv1_app 
+07:51:59.836 INFO  - Processing command line option -hwspec D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+07:52:00.008 INFO  - The hardware specification for project 'EDK_hw_platform' is different from D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+07:52:00.180 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml into \EDK_hw_platform\system.xml. 
+07:52:00.180 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.bit into \EDK_hw_platform\system.bit. 
+07:52:00.180 INFO  - Copied contents of D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system_bd.bmm into \EDK_hw_platform\system_bd.bmm. 
+07:52:00.383 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+07:52:10.445 INFO  - Updating hardware inferred compiler options for lv1_app. 
+07:52:10.476 INFO  - Clearing existing target manager status. 
+07:52:11.871 INFO  - Closing and re-opening the MSS file of ther project lv1_app_bsp 
+07:52:13.481 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+07:55:17.783 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+07:55:31.831 INFO  - Processing command line option -hwspec D:\DRS\LV1_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+08:03:24.935 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:04:21.425 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:04:43.715 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:04:59.333 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:05:24.462 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:05:43.971 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:07:33.118 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:08:48.100 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:09:16.827 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:09:30.580 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:11:07.174 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:13:26.341 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:13:51.177 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:14:27.553 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:15:05.076 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:17:11.529 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:17:50.713 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:18:14.143 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:23:18.959 INFO  - Settings changed on project lv1_app_bsp. Triggering a rebuild... 
+08:23:19.334 INFO  - Refreshed build settings on project lv1_app 
+08:24:23.192 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:26:34.568 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:26:58.691 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:28:48.430 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:29:19.104 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:31:31.716 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:31:52.756 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV1_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:32:36.731 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
