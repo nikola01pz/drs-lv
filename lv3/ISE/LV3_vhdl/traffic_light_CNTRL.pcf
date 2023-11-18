@@ -1,0 +1,20 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Nov 16 08:57:12 2023
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "segment<0>" LOCATE = SITE "M13" LEVEL 1;
+COMP "segment<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "segment<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "segment<3>" LOCATE = SITE "M14" LEVEL 1;
+COMP "segment<4>" LOCATE = SITE "U18" LEVEL 1;
+COMP "segment<5>" LOCATE = SITE "U17" LEVEL 1;
+COMP "segment<6>" LOCATE = SITE "T18" LEVEL 1;
+COMP "segment<7>" LOCATE = SITE "T17" LEVEL 1;
+COMP "display<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "display<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "display<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "display<3>" LOCATE = SITE "P17" LEVEL 1;
+SCHEMATIC END;
+

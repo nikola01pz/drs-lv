@@ -1,0 +1,3 @@
+vhdl work "generic_divider.vhd"
+vhdl work "binary_counter.vhd"
+vhdl work "binary_counter_test.vhd"

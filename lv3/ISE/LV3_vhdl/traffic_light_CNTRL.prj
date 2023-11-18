@@ -1,0 +1,2 @@
+vhdl work "generic_divider.vhd"
+vhdl work "traffic_light_CNTRL.vhd"

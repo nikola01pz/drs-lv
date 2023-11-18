@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.syr" 
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.syr" 
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.syr" 
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenSegmentCNTRL.ucf -p xc6slx16-csg324-3 sevenSegmentCNTRL.ngc sevenSegmentCNTRL.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenSegmentCNTRL_map.ncd sevenSegmentCNTRL.ngd sevenSegmentCNTRL.pcf 
+par -w -intstyle ise -ol high -mt off sevenSegmentCNTRL_map.ncd sevenSegmentCNTRL.ncd sevenSegmentCNTRL.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevenSegmentCNTRL.twx sevenSegmentCNTRL.ncd -o sevenSegmentCNTRL.twr sevenSegmentCNTRL.pcf -ucf sevenSegmentCNTRL.ucf 
+bitgen -intstyle ise -f sevenSegmentCNTRL.ut sevenSegmentCNTRL.ncd 
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/sevenSegmentCNTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sevenSegmentCNTRL.ucf -p xc6slx16-csg324-3 sevenSegmentCNTRL.ngc sevenSegmentCNTRL.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sevenSegmentCNTRL_map.ncd sevenSegmentCNTRL.ngd sevenSegmentCNTRL.pcf 
+par -w -intstyle ise -ol high -mt off sevenSegmentCNTRL_map.ncd sevenSegmentCNTRL.ncd sevenSegmentCNTRL.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sevenSegmentCNTRL.twx sevenSegmentCNTRL.ncd -o sevenSegmentCNTRL.twr sevenSegmentCNTRL.pcf -ucf sevenSegmentCNTRL.ucf 
+bitgen -intstyle ise -f sevenSegmentCNTRL.ut sevenSegmentCNTRL.ncd 

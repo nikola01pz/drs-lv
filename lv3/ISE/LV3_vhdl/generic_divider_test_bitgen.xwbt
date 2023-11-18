@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\DRS\LV3_Milicevic_Istvanic\ISE\LV3_vhdl\generic_divider_test.ncd
+OUTFILE=D:\DRS\LV3_Milicevic_Istvanic\ISE\LV3_vhdl\generic_divider_test.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=D:\DRS\LV3_Milicevic_Istvanic\ISE\LV3_vhdl
+LICENSE=ISE
+USER_INFO=210968192_1777509436_210669687_605

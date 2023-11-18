@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Thu Nov 16 09:25:43 2023
+# Process ID: 6080
+# Log file: D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/planAhead_run_3/planAhead.log
+# Journal file: D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/pa.fromNetlist.tcl

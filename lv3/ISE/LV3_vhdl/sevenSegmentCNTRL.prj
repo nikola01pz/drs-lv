@@ -1,0 +1,5 @@
+vhdl work "mux.vhd"
+vhdl work "hex_decoder.vhd"
+vhdl work "generic_divider.vhd"
+vhdl work "binary_counter.vhd"
+vhdl work "sevenSegmentCNTRL.vhd"

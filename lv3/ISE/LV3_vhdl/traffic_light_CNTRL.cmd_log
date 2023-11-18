@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/traffic_light_CNTRL.xst" -ofn "D:/DRS/LV3_Milicevic_Istvanic/ISE/LV3_vhdl/traffic_light_CNTRL.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc traffic_light_CNTRL.ucf -p xc6slx16-csg324-3 traffic_light_CNTRL.ngc traffic_light_CNTRL.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o traffic_light_CNTRL_map.ncd traffic_light_CNTRL.ngd traffic_light_CNTRL.pcf 
+par -w -intstyle ise -ol high -mt off traffic_light_CNTRL_map.ncd traffic_light_CNTRL.ncd traffic_light_CNTRL.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml traffic_light_CNTRL.twx traffic_light_CNTRL.ncd -o traffic_light_CNTRL.twr traffic_light_CNTRL.pcf -ucf traffic_light_CNTRL.ucf 
+bitgen -intstyle ise -f traffic_light_CNTRL.ut traffic_light_CNTRL.ncd 
