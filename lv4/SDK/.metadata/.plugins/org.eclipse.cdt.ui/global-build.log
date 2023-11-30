@@ -1,0 +1,1312 @@
+08:53:56 **** Build of project lv4_timer_source_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling tmrctr"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling intc"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:54:05 **** Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    308	   2084	   4822	   12d6	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+08:54:27 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/helloworld.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2430	    308	   2084	   4822	   12d6	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+08:54:32 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/main.o ./src/platform.o  ./src/helloworld.d ./src/main.d ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+08:54:32 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv4_timer_source.elf] Greška 1
+08:54:40 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:46:10: warning: type defaults to 'int' in declaration of 'TimerExpired' [-Wimplicit-int]
+../src/main.c: In function 'main':
+../src/main.c:70:8: warning: passing argument 1 of 'TmrCtrIntrInit' from incompatible pointer type [enabled by default]
+../src/main.c:27:5: note: expected 'struct XIntc *' but argument is of type 'struct XIntc **'
+../src/main.c:70:8: warning: passing argument 2 of 'TmrCtrIntrInit' from incompatible pointer type [enabled by default]
+../src/main.c:27:5: note: expected 'struct XTmrCtr *' but argument is of type 'struct XTmrCtr **'
+'Finished building: ../src/main.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10440	    376	   2248	  13064	   3308	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+08:55:05 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+08:57:53 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+08:57:53 **** Clean-only build of project lv4_timer_source_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:57:54 **** Build of project lv4_timer_source_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling tmrctr"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling intc"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:58:03 **** Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:46:10: warning: type defaults to 'int' in declaration of 'TimerExpired' [-Wimplicit-int]
+../src/main.c: In function 'main':
+../src/main.c:70:8: warning: passing argument 1 of 'TmrCtrIntrInit' from incompatible pointer type [enabled by default]
+../src/main.c:27:5: note: expected 'struct XIntc *' but argument is of type 'struct XIntc **'
+../src/main.c:70:8: warning: passing argument 2 of 'TmrCtrIntrInit' from incompatible pointer type [enabled by default]
+../src/main.c:27:5: note: expected 'struct XTmrCtr *' but argument is of type 'struct XTmrCtr **'
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10440	    376	   2248	  13064	   3308	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+08:58:23 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+08:59:02 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+08:59:44 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+08:59:44 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:46:10: warning: type defaults to 'int' in declaration of 'TimerExpired' [-Wimplicit-int]
+../src/main.c: In function 'main':
+../src/main.c:78:2: error: incompatible type for argument 1 of 'XTmrCtr_Start'
+../../lv4_timer_source_bsp/microblaze_0/include/xtmrctr.h:271:6: note: expected 'struct XTmrCtr *' but argument is of type 'XTmrCtr'
+make: *** [src/main.o] Greška 1
+08:59:53 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:46:10: warning: type defaults to 'int' in declaration of 'TimerExpired' [-Wimplicit-int]
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10436	    376	   2292	  13104	   3330	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:00:06 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10436	    376	   2292	  13104	   3330	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:00:16 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:00:56 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10444	    376	   2292	  13112	   3338	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:01:04 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:10:28 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:10:44 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+09:10:44 **** Clean-only build of project lv4_timer_source_bsp ****
+make -k clean 
+rm -rf microblaze_0
+09:10:44 **** Build of project lv4_timer_source_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling tmrctr"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling intc"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+09:10:53 **** Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10496	    384	   2288	  13168	   3370	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:11:19 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/main.o ./src/platform.o  ./src/main.d ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+09:11:19 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv4_timer_source.elf] Greška 1
+09:11:25 **** Clean-only build of configuration Debug for project lv4_timer_source ****
+make clean 
+rm -rf  ./src/platform.o  ./src/platform.d  lv4_timer_source.elf.size  lv4_timer_source.elf.elfcheck  lv4_timer_source.elf
+' '
+09:11:26 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv4_timer_source.elf] Greška 1
+09:11:37 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv4_timer_source.elf] Greška 1
+09:11:44 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:2:3: error: expected identifier or '(' before numeric constant
+In file included from ../src/main2.c:176:0:
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:177:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:205:1: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:205:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:205:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:206:1: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:206:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:206:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:247:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:249:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:270:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:272:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:277:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:279:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:301:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:303:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:344:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:347:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:362:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:364:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:389:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:397:1: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:397:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:397:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:405:1: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:405:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:405:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:415:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:433:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:435:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:447:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:449:8: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:477:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:479:5: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:489:9: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:490:9: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:555:69: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:557:6: error: unknown type name 'size_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:569:3: error: unknown type name 'cookie_read_function_t'
+c:\xilinx\14.7\ise_ds\edk\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:570:3: error: unknown type name 'cookie_write_function_t'
+../src/main2.c: In function 'main':
+../src/main2.c:219:29: error: 'Gpio' undeclared (first use in this function)
+../src/main2.c:219:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:224:25: error: 'Intc' undeclared (first use in this function)
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:330:65: error: 'IntrCnt' undeclared (first use in this function)
+../src/main2.c:309:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:11:58 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'main':
+../src/main2.c:46:29: error: 'Gpio' undeclared (first use in this function)
+../src/main2.c:46:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:51:25: error: 'Intc' undeclared (first use in this function)
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:157:65: error: 'IntrCnt' undeclared (first use in this function)
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:13:09 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:157:65: error: 'IntrCnt' undeclared (first use in this function)
+../src/main2.c:157:65: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:13:37 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:15:49 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:16:54 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:17:36 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:18:24 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:25: error: 'Intc' undeclared (first use in this function)
+../src/main2.c:51:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:18:33 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:19:15 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:19:30 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc **'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:19:36 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:20:17 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc **'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:20:20 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c:27:1: error: unknown type name 'Intc'
+../src/main2.c: In function 'main':
+../src/main2.c:51:2: warning: passing argument 1 of 'GpioIntrInit' from incompatible pointer type [enabled by default]
+../src/main2.c:20:5: note: expected 'struct XIntc *' but argument is of type 'int *'
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:21:37 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:141:25: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/main2.c:141:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+../src/main2.c:146:2: error: expected ';' before 'int'
+../src/main2.c:158:74: error: 'pushValue' undeclared (first use in this function)
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:22:58 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:141:25: error: 'InstancePtr' undeclared (first use in this function)
+../src/main2.c:141:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:142:16: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:23:12 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:141:2: error: incompatible type for argument 1 of 'XGpio_InterruptDisable'
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:194:6: note: expected 'struct XGpio *' but argument is of type 'XGpio'
+../src/main2.c:142:2: error: incompatible type for argument 1 of 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: expected 'struct XIntc *' but argument is of type 'XIntc'
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+../src/main2.c:136:9: warning: unused variable 'GpioPtr' [-Wunused-variable]
+make: *** [src/main2.o] Greška 1
+09:23:28 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+make: *** [src/main2.o] Greška 1
+09:23:51 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:142:16: error: invalid type argument of unary '*' (have 'XIntc')
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+make: *** [src/main2.o] Greška 1
+09:24:00 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:142:2: warning: passing argument 1 of 'XIntc_Disable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: expected 'struct XIntc *' but argument is of type 'struct XGpio *'
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+make: *** [src/main2.o] Greška 1
+09:25:03 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:142:16: error: 'IntcInstancePtr' undeclared (first use in this function)
+../src/main2.c:142:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+make: *** [src/main2.o] Greška 1
+09:26:32 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:142:2: error: too few arguments to function 'XIntc_Disable'
+../../lv4_timer_source_bsp/microblaze_0/include/xintc.h:312:6: note: declared here
+make: *** [src/main2.o] Greška 1
+09:27:14 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioIntrInit':
+../src/main2.c:116:2: warning: passing argument 1 of 'XGpio_InterruptEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:193:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c:117:2: warning: passing argument 1 of 'XGpio_InterruptGlobalEnable' from incompatible pointer type [enabled by default]
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:191:6: note: expected 'struct XGpio *' but argument is of type 'struct XIntc *'
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:158:12: warning: 'pushValue' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8630	    372	   2268	  11270	   2c06	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:29:24 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:158:12: warning: 'pushValue' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8630	    372	   2268	  11270	   2c06	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:31:46 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8902	    372	   2268	  11542	   2d16	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:33:25 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8966	    372	   2268	  11606	   2d56	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:33:59 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:34:35 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:35:48 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:38:02 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:38:11 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:38:46 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+../src/main2.c: In function 'GpioHandler':
+../src/main2.c:150:2: error: too few arguments to function 'XGpio_DiscreteRead'
+../../lv4_timer_source_bsp/microblaze_0/include/xgpio.h:173:5: note: declared here
+make: *** [src/main2.o] Greška 1
+09:39:33 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:41:06 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:43:05 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:43:47 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:46:19 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:48:38 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:48:46 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:48:52 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:50:01 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:51:22 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9190	    372	   2268	  11830	   2e36	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:51:29 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+09:51:58 **** Auto Build of configuration Debug for project lv4_timer_source ****
+make all 
+'Building file: ../src/main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv4_timer_source_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main2.d" -MT"src/main2.d" -o "src/main2.o" "../src/main2.c"
+'Finished building: ../src/main2.c'
+' '
+'Building target: lv4_timer_source.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv4_timer_source_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv4_timer_source.elf"  ./src/main2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv4_timer_source.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv4_timer_source.elf  |tee "lv4_timer_source.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8662	    372	   2268	  11302	   2c26	lv4_timer_source.elf
+'Finished building: lv4_timer_source.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv4_timer_source.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv4_timer_source.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv4_timer_source.elf 
+
+ELF file	: lv4_timer_source.elf
+elfcheck passed.
+'Finished building: lv4_timer_source.elf.elfcheck'
+' '
+09:52:05 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'

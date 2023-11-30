@@ -1,0 +1,6 @@
+09:52:05 **** Auto Build of project lv4_timer_source_bsp ****
+make -k all 
+'Finished building libraries'
+
+09:52:05 Build Finished (took 174ms)
+

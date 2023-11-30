@@ -1,0 +1,345 @@
+
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+/***************************** Include Files *********************************/
+
+#include <stdio.h>
+#include "xintc.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_exception.h"
+
+/************************** Definicije konstanti *****************************/
+#define GPIO_DEVICE_ID				XPAR_PUSH_BUTTONS_4BITS_DEVICE_ID
+#define INTC_DEVICE_ID				XPAR_INTC_0_DEVICE_ID
+
+#define INTC_GPIO_INTERRUPT_ID		XPAR_INTC_0_GPIO_2_VEC_ID
+#define GPIO_CHANEL_INTERRUPT_MASK	1
+
+#define INTR_DELAY					0x000FFFFF
+/************************** Prototipi funkcija ******************************/
+void GpioHandler(void *CallBackRef);
+
+int GpioIntrInit(XIntc *IntcInstancePtr, XGpio *InstancePtr,
+			u16 DeviceId, u16 IntcDeviceId, u16 IntrId, u16 IntrMask);
+
+
+//***********************************************TO DO 1*************************************************//
+//**********************************Deklarirati varijable Gpio i Intc************************************//
+
+
+//******************************************************************************************************//
+
+
+//deklaracija globalne varijable koja je potrebna u prekidnoj rutini
+static u16 GlobalIntrMask;
+
+//***********************************************TO DO 2************************************************//
+//******************************Deklarirati globalnu varijablu TimerExpired ****************************//
+
+
+//******************************************************************************************************//
+
+int main(void)
+{
+	int Status;
+
+	print(" Press button to Generate Interrupt\r\n");
+
+	Status = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = GpioIntrInit(&Intc, &Gpio, GPIO_DEVICE_ID, INTC_DEVICE_ID, INTC_GPIO_INTERRUPT_ID, GPIO_CHANEL_INTERRUPT_MASK);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+
+
+/******************************************************************************/
+/**
+*
+* Inicijalizacija GPIO kontrolera i upravljaèa prekidima.
+* Funkcija prima sljedeæe parametre:
+*
+* @param	IntcInstancePtr - pokazivaè na varijablu tipa XIntc,
+* @param	InstancePtr - pokazivaè na varijablu tipa XGpio,
+* @param	DeviceId - vrijednost konstante XPAR_<GPIO_instance>_DEVICE_ID iz datoteke xparameters.h,
+* @param	IntrId - vrijednost konstante XPAR_<INTC_instance>_<GPIO_instance>_IP2INTC_IRPT_INTR iz datoteke xparameters.h,
+* @param	IntcDeviceId - vrijednost konstante XPAR_<Intc_instance>_DEVICE_ID iz datoteke xparameters.h,
+* @param	IntrMask - maska GPIO kanala (broj kanala)
+*
+* @return	XST_SUCCESS ako je inicijalizacija uspješna, a u suprotno funkcija vraæa XST_FAILURE
+*
+******************************************************************************/
+int GpioIntrInit(XIntc *IntcInstancePtr, XGpio *InstancePtr,
+			u16 DeviceId, u16 IntcDeviceId, u16 IntrId, u16 IntrMask)
+{
+	int Status;
+
+	GlobalIntrMask = IntrMask;
+
+	//**********************************************TO DO 3************************************************//
+	//****Inicijalizirati upravljaè prekidima, povratnu vrijednost funkcije spremiti u varijablu Status****//
+
+	//*****************************************************************************************************//
+	if (Status != XST_SUCCESS) {
+		return Status;
+	}
+
+	//Povezivanje prekidne rutine
+	XIntc_Connect(IntcInstancePtr, IntrId,
+		      (Xil_ExceptionHandler)GpioHandler, InstancePtr);
+
+
+	//**********************************************TO DO 4************************************************//
+	//*********************************Omoguæiti rad upravljaèa prekidima**********************************//
+
+	//*****************************************************************************************************//
+
+	//***********************************************TO DO 5***********************************************//
+	//***Postaviti mod rada upravljaèa prekida, povratnu vrijednost funkcije spremiti u varijablu Status***//
+
+	//*****************************************************************************************************//
+	if (Status != XST_SUCCESS) {
+		return Status;
+	}
+
+	/*
+	 * Enable the GPIO channel interrupts so that push button can be
+	 * detected and enable interrupts for the GPIO device
+	 */
+	//**********************************************TO DO 6************************************************//
+	//**************************Omoguæiti generiranje prekida s GPIO kontrolerom***************************//
+
+
+	//*****************************************************************************************************//
+
+	//Inicijalizacija tablice iznimki
+	Xil_ExceptionInit();
+
+	//Registriranje upravljaèa prekidima i tablice iznimki
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 (Xil_ExceptionHandler)XIntc_InterruptHandler, IntcInstancePtr);
+
+	//Omoguæavanje nekritiènih iznimki
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+//Prekidna rutina
+void GpioHandler(void *CallbackRef)
+{
+	XGpio *GpioPtr = (XGpio *)CallbackRef;
+	u32 delay = 0;
+
+	//**********************************************TO DO 7************************************************//
+	//******************************************Onemoguæiti prekide****************************************//
+
+
+	//*****************************************************************************************************//
+
+	int pushValue;
+
+	//**********************************************TO DO 8************************************************//
+	//***************************************Proèitati stanje tipkala**************************************//
+
+	//*****************************************************************************************************//
+
+	//**********************************************TO DO 9************************************************//
+	//*********************************Inkrementirati varijablu IntrCnt************************************//
+
+	//*****************************************************************************************************//
+
+	xil_printf("Interrupt Handler no. %d - button value: %d!\r\n", IntrCnt, pushValue);
+
+	while(delay < INTR_DELAY)
+		delay++;
+
+	//**********************************************TO DO 10***********************************************//
+	//******************************************Omoguæiti prekide******************************************//
+
+
+	//*****************************************************************************************************//
+
+	//**********************************************TO DO 11***********************************************//
+	//*************************************Obrisati prekidne zahtjeve**************************************//
+
+	//*****************************************************************************************************//
+}
