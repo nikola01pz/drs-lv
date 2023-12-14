@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="D:\DRS\LV5_Milicevic_Istvanic\SDK\lv5\Debug\lv5.elf" key="EDK_hw_platform-microblaze_0-initElf"/>
+	<item value="system.bit" key="EDK_hw_platform-bitFile"/>
+	<item value="system_bd.bmm" key="EDK_hw_platform-bmmFile"/>
+</section>

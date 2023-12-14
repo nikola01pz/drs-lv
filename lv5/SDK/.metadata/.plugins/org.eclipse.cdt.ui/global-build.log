@@ -1,0 +1,1945 @@
+08:06:15 **** Incremental Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:135:18: error: expected expression before '=' token
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+make: *** [main.o] Greška 1
+08:06:46 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:06:59 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:08:51 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:135:18: error: expected expression before '=' token
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+make: *** [main.o] Greška 1
+08:08:56 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7166	    296	   2136	   9598	   257e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:09:05 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:09:24 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:10:36 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:10:46 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:12:04 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7178	    296	   2142	   9616	   2590	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:12:12 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:12:40 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7178	    296	   2142	   9616	   2590	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:12:49 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:24:43 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:24:58 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+08:24:58 **** Clean-only build of project Projekt_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:24:58 **** Build of project Projekt_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling uartlite"
+"Compiling ps2"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:25:06 **** Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7178	    296	   2142	   9616	   2590	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:25:20 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+
+****  of configuration Debug for project lv5 ****
+
+Nothing to build for project lv5
+08:25:34 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+08:25:34 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv5.elf] Greška 1
+08:26:02 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:25:20: error: unknown type name 'XIntc'
+../main2.c:25:40: error: unknown type name 'XPs2'
+../main2.c:29:31: error: unknown type name 'XIntc'
+../main2.c:29:51: error: unknown type name 'XPs2'
+../main2.c:87:20: error: unknown type name 'XIntc'
+../main2.c:87:40: error: unknown type name 'XPs2'
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:186:17: error: 'XPS2_IPIXR_RX_FULL' undeclared (first use in this function)
+../main2.c:186:17: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c:191:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c:196:17: error: 'XPS2_IPIXR_RX_ERR' undeclared (first use in this function)
+../main2.c:203:17: error: 'XPS2_IPIXR_RX_OVF' undeclared (first use in this function)
+../main2.c:210:17: error: 'XPS2_IPIXR_TX_ACK' undeclared (first use in this function)
+../main2.c:218:17: error: 'XPS2_IPIXR_TX_NOACK' undeclared (first use in this function)
+../main2.c:225:17: error: 'XPS2_IPIXR_WDT_TOUT' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:248:31: error: unknown type name 'XIntc'
+../main2.c:248:51: error: unknown type name 'XPs2'
+../main2.c:177:13: warning: 'Ps2IntrHandler' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:27:22 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:8:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [main2.o] Greška 1
+08:27:46 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:8:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [main2.o] Greška 1
+08:29:17 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main2.o  ./main2.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+08:29:18 **** Clean-only build of project Projekt_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:29:18 **** Build of project Projekt_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling uartlite"
+"Compiling ps2"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:29:26 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main2.o  ./main2.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+08:29:26 **** Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:8:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [main2.o] Greška 1
+08:30:30 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:25:20: error: unknown type name 'XIntc'
+../main2.c:25:40: error: unknown type name 'XPs2'
+../main2.c:29:31: error: unknown type name 'XIntc'
+../main2.c:29:51: error: unknown type name 'XPs2'
+../main2.c:87:20: error: unknown type name 'XIntc'
+../main2.c:87:40: error: unknown type name 'XPs2'
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:186:17: error: 'XPS2_IPIXR_RX_FULL' undeclared (first use in this function)
+../main2.c:186:17: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c:191:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c:196:17: error: 'XPS2_IPIXR_RX_ERR' undeclared (first use in this function)
+../main2.c:203:17: error: 'XPS2_IPIXR_RX_OVF' undeclared (first use in this function)
+../main2.c:210:17: error: 'XPS2_IPIXR_TX_ACK' undeclared (first use in this function)
+../main2.c:218:17: error: 'XPS2_IPIXR_TX_NOACK' undeclared (first use in this function)
+../main2.c:225:17: error: 'XPS2_IPIXR_WDT_TOUT' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:248:31: error: unknown type name 'XIntc'
+../main2.c:248:51: error: unknown type name 'XPs2'
+../main2.c:177:13: warning: 'Ps2IntrHandler' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:30:40 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:25:20: error: unknown type name 'XIntc'
+../main2.c:25:40: error: unknown type name 'XPs2'
+../main2.c:29:31: error: unknown type name 'XIntc'
+../main2.c:29:51: error: unknown type name 'XPs2'
+../main2.c:87:20: error: unknown type name 'XIntc'
+../main2.c:87:40: error: unknown type name 'XPs2'
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:186:17: error: 'XPS2_IPIXR_RX_FULL' undeclared (first use in this function)
+../main2.c:186:17: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c:191:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c:196:17: error: 'XPS2_IPIXR_RX_ERR' undeclared (first use in this function)
+../main2.c:203:17: error: 'XPS2_IPIXR_RX_OVF' undeclared (first use in this function)
+../main2.c:210:17: error: 'XPS2_IPIXR_TX_ACK' undeclared (first use in this function)
+../main2.c:218:17: error: 'XPS2_IPIXR_TX_NOACK' undeclared (first use in this function)
+../main2.c:225:17: error: 'XPS2_IPIXR_WDT_TOUT' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:248:31: error: unknown type name 'XIntc'
+../main2.c:248:51: error: unknown type name 'XPs2'
+../main2.c:177:13: warning: 'Ps2IntrHandler' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:30:46 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:7:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [main2.o] Greška 1
+08:31:57 **** Clean-only build of project Projekt_bsp ****
+make -k clean 
+rm -rf microblaze_0
+08:31:58 **** Build of project Projekt_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling uartlite"
+"Compiling ps2"
+"Compiling intc"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+08:32:06 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:25:40: error: unknown type name 'XPs2'
+../main2.c:29:51: error: unknown type name 'XPs2'
+../main2.c:87:40: error: unknown type name 'XPs2'
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:186:17: error: 'XPS2_IPIXR_RX_FULL' undeclared (first use in this function)
+../main2.c:186:17: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c:191:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c:196:17: error: 'XPS2_IPIXR_RX_ERR' undeclared (first use in this function)
+../main2.c:203:17: error: 'XPS2_IPIXR_RX_OVF' undeclared (first use in this function)
+../main2.c:210:17: error: 'XPS2_IPIXR_TX_ACK' undeclared (first use in this function)
+../main2.c:218:17: error: 'XPS2_IPIXR_TX_NOACK' undeclared (first use in this function)
+../main2.c:225:17: error: 'XPS2_IPIXR_WDT_TOUT' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:248:51: error: unknown type name 'XPs2'
+../main2.c:177:13: warning: 'Ps2IntrHandler' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:32:18 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrExample':
+../main2.c:125:19: error: 'Ps2Inst' undeclared (first use in this function)
+../main2.c:125:19: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:192:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:249:12: warning: 'Ps2SetupIntrSystem' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:35:26 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrExample':
+../main2.c:123:19: error: 'Ps2Inst' undeclared (first use in this function)
+../main2.c:123:19: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:190:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:247:12: warning: 'Ps2SetupIntrSystem' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:35:50 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrExample':
+../main2.c:123:19: error: 'Ps2Inst' undeclared (first use in this function)
+../main2.c:123:19: note: each undeclared identifier is reported only once for each function it appears in
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:190:20: error: 'RxBuffer' undeclared (first use in this function)
+../main2.c: At top level:
+../main2.c:247:12: warning: 'Ps2SetupIntrSystem' defined but not used [-Wunused-function]
+make: *** [main2.o] Greška 1
+08:38:05 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:248:12: warning: 'Ps2SetupIntrSystem' defined but not used [-Wunused-function]
+../main2.c: In function 'Ps2IntrExample':
+../main2.c:98:5: warning: 'ConfigPtr' is used uninitialized in this function [-Wuninitialized]
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:258:5: warning: 'Status' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6098	    316	   2202	   8616	   21a8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:41:47 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:258:5: warning: 'Status' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7878	    332	   2196	  10406	   28a6	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:44:09 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:259:5: warning: 'Status' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7938	    332	   2202	  10472	   28e8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:45:12 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:182:2: error: incompatible type for argument 1 of 'XPs2_Recv'
+../../Projekt_bsp/microblaze_0/include/xps2.h:390:5: note: expected 'struct XPs2 *' but argument is of type 'XIntc'
+../main2.c:182:2: warning: passing argument 2 of 'XPs2_Recv' makes pointer from integer without a cast [enabled by default]
+../../Projekt_bsp/microblaze_0/include/xps2.h:390:5: note: expected 'u8 *' but argument is of type 'u8'
+make: *** [main2.o] Greška 1
+08:45:36 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:182:2: error: incompatible type for argument 1 of 'XPs2_Recv'
+../../Projekt_bsp/microblaze_0/include/xps2.h:390:5: note: expected 'struct XPs2 *' but argument is of type 'XIntc'
+make: *** [main2.o] Greška 1
+08:46:01 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2IntrHandler':
+../main2.c:182:2: warning: passing argument 1 of 'XPs2_Recv' from incompatible pointer type [enabled by default]
+../../Projekt_bsp/microblaze_0/include/xps2.h:390:5: note: expected 'struct XPs2 *' but argument is of type 'struct XIntc *'
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:259:5: warning: 'Status' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8202	    332	   2202	  10736	   29f0	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:46:35 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:259:5: warning: 'Status' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8202	    332	   2202	  10736	   29f0	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:48:19 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8734	    332	   2324	  11390	   2c7e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:48:47 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c: In function 'Ps2SetupIntrSystem':
+../main2.c:274:27: error: 'REAL_MODE' undeclared (first use in this function)
+../main2.c:274:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main2.o] Greška 1
+08:50:23 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8994	    332	   2330	  11656	   2d88	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:51:02 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9218	    332	   2330	  11880	   2e68	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+08:51:18 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:51:35 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+08:56:45 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:00:04 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9218	    332	   2330	  11880	   2e68	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:00:12 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:07:23 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main2.o  ./main2.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+
+****  of configuration Debug for project lv5 ****
+
+Nothing to build for project lv5
+09:07:34 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main2.o  ./main2.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+09:07:34 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:109:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:151:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2142	   9912	   26b8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:14:02 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:112:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:154:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2142	   9912	   26b8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:24:04 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c:16:1: error: unknown type name 'XGpio'
+../main.c: In function 'main':
+../main.c:51:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+../main.c:70:4: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+../main.c: In function 'Ps2SendData':
+../main.c:118:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:160:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+make: *** [main.o] Greška 1
+09:24:23 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:119:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:161:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    352	   2152	  10566	   2946	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:24:43 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:26:53 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:113:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:155:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7742	    352	   2152	  10246	   2806	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:27:02 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:121:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:163:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8054	    352	   2152	  10558	   293e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:27:55 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:28:34 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:122:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:164:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2158	   9928	   26c8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:28:43 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:29:22 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:126:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:168:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2158	   9928	   26c8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:29:28 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:124:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:166:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2158	   9928	   26c8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:29:37 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:34:43 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+09:34:43 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:124:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:166:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2158	   9928	   26c8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:34:52 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:36:06 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:124:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:166:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7434	    336	   2158	   9928	   26c8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:37:03 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    352	   2152	  10566	   2946	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:37:12 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:37:57 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:122:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:164:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    352	   2152	  10566	   2946	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:38:07 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:39:28 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    352	   2152	  10566	   2946	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:39:37 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:40:16 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:124:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:166:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    352	   2158	  10600	   2968	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:40:28 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:40:47 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:41:11 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8066	    352	   2158	  10576	   2950	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:41:20 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8066	    352	   2158	  10576	   2950	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:41:29 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:41:46 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    352	   2152	  10566	   2946	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:41:54 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:42:50 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    352	   2152	  10622	   297e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:42:59 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:43:35 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    352	   2152	  10622	   297e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:43:53 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8154	    352	   2158	  10664	   29a8	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:44:02 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:44:19 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    352	   2152	  10622	   297e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:44:41 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:125:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:167:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    352	   2152	  10622	   297e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:44:56 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    352	   2152	  10622	   297e	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:45:04 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:46:17 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:29:17: warning: unused variable 'j' [-Wunused-variable]
+../main.c:29:14: warning: unused variable 'i' [-Wunused-variable]
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7294	    348	   2156	   9798	   2646	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:46:25 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:47:31 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:29:17: warning: unused variable 'j' [-Wunused-variable]
+../main.c:29:14: warning: unused variable 'i' [-Wunused-variable]
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7294	    348	   2156	   9798	   2646	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:47:38 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
+09:48:57 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+09:48:57 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:29:17: warning: unused variable 'j' [-Wunused-variable]
+../main.c:29:14: warning: unused variable 'i' [-Wunused-variable]
+../main.c: In function 'Ps2SendData':
+../main.c:123:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+../main.c: In function 'Ps2ReceiveData':
+../main.c:165:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../main.c'
+' '
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./main2.o: In function `main':
+D:\DRS\LV5_Milicevic_Istvanic\SDK\lv5\Debug/../main2.c:53: multiple definition of `main'
+./main.o:D:\DRS\LV5_Milicevic_Istvanic\SDK\lv5\Debug/../main.c:27: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv5.elf] Greška 1
+09:50:48 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:51:1: error: unknown type name 'XGpio'
+../main2.c: In function 'main':
+../main2.c:55:2: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+make: *** [main2.o] Greška 1
+09:52:09 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+../main2.c:9:18: fatal error: xgio.h: No such file or directory
+compilation terminated.
+make: *** [main2.o] Greška 1
+09:52:14 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main.o ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./main2.o: In function `main':
+D:\DRS\LV5_Milicevic_Istvanic\SDK\lv5\Debug/../main2.c:55: multiple definition of `main'
+./main.o:D:\DRS\LV5_Milicevic_Istvanic\SDK\lv5\Debug/../main.c:27: first defined here
+collect2: ld returned 1 exit status
+make: *** [lv5.elf] Greška 1
+09:52:54 **** Clean-only build of configuration Debug for project lv5 ****
+make clean 
+rm -rf  ./main.o ./main2.o  ./main.d ./main2.d  lv5.elf.size  lv5.elf.elfcheck  lv5.elf
+' '
+09:52:54 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9546	    348	   2346	  12240	   2fd0	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:54:25 **** Auto Build of configuration Debug for project lv5 ****
+make all 
+'Building file: ../main2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../Projekt_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main2.d" -MT"main2.d" -o "main2.o" "../main2.c"
+'Finished building: ../main2.c'
+' '
+'Building target: lv5.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Projekt_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv5.elf"  ./main2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv5.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv5.elf  |tee "lv5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9802	    348	   2346	  12496	   30d0	lv5.elf
+'Finished building: lv5.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv5.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv5.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv5.elf 
+
+ELF file	: lv5.elf
+elfcheck passed.
+'Finished building: lv5.elf.elfcheck'
+' '
+09:54:33 **** Auto Build of project Projekt_bsp ****
+make -k all 
+'Finished building libraries'
