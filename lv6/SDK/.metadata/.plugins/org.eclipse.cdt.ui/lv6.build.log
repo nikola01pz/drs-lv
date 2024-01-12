@@ -1,0 +1,42 @@
+09:52:11 **** Auto Build of configuration Debug for project lv6 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv6_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:72:2: warning: pointer targets in passing argument 2 of 'TftWriteString' differ in signedness [-Wpointer-sign]
+../src/main.c:28:5: note: expected 'const u8 *' but argument is of type 'char *'
+../src/main.c:50:9: warning: unused variable 'j' [-Wunused-variable]
+../src/main.c:50:6: warning: unused variable 'i' [-Wunused-variable]
+../src/main.c:43:5: warning: unused variable 'Znak' [-Wunused-variable]
+../src/main.c: In function 'Ps2ReceiveData':
+../src/main.c:274:6: warning: variable 'BytesReceived' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/main.c'
+' '
+'Building target: lv6.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv6_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv6.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lv6.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size lv6.elf  |tee "lv6.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11690	   1464	   2182	  15336	   3be8	lv6.elf
+'Finished building: lv6.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck lv6.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "lv6.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+lv6.elf 
+
+ELF file	: lv6.elf
+elfcheck passed.
+'Finished building: lv6.elf.elfcheck'
+' '
+
+09:52:12 Build Finished (took 1s.687ms)
+

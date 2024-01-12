@@ -1,0 +1,153 @@
+#include "xtft.h"
+#include "xparameters.h"
+
+//***********************************************TO DO 1*************************************************//
+//*******Definirati konstantu TFT_FRAME_ADDR i postaviti ju na Base Address Micron RAM memorije**********//
+#define TFT_FRAME_ADDR XPAR_MICRON_RAM_MEM0_BASEADDR
+
+//******************************************************************************************************//
+
+//***********************************************TO DO 6*************************************************//
+//*******Definirati konstantu TFT_FRAME_ADDR i postaviti ju na Base Address Micron RAM memorije**********//
+#define RED_COLOR 0x00FF0000
+#define GREEN_COLOR 0x0000FF00
+#define BLUE_COLOR 0x000000FF
+#define BGCOLOR_VALUE 0x0
+#define FGCOLOR_VALUE 0x00FFFFFF
+
+//******************************************************************************************************//
+
+/*************************** Prototipi funkcija ******************************/
+int TftInitialize(u32 TftDeviceId);
+int TftWriteString(XTft *InstancePtr, const u8 *CharValue);
+void DrawHLine(u32 col, u32 row, u32 color, int length);
+void DrawVLine(u32 col, u32 row, u32 color, int length);
+
+static XTft TftInstance;
+
+int main()
+{
+	int Status;
+	u8 Znak;
+
+	Status = TftInitialize(XPAR_VGA_CONTROLLER_DEVICE_ID);
+	if ( Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//***********************************************TO DO 5*************************************************//
+	//*******Oèistiti ekran, postaviti boju pozadine i boju slova i ispisati nekoliko znakova na ekran*******//
+	XTft_ClearScreen(&TftInstance);
+
+	XTft_SetColor(&TftInstance, FGCOLOR_VALUE, BGCOLOR_VALUE);
+
+	XTft_Write(&TftInstance, 'a');
+	XTft_Write(&TftInstance, 'b');
+	XTft_Write(&TftInstance, 'c');
+
+	//*******************************************************************************************************//
+
+	//***********************************************TO DO 7*************************************************//
+	//****************************Oèistiti ekran, ispisati proizvoljan string na ekran***********************//
+	XTft_ClearScreen(&TftInstance);
+	TftWriteString(&TftInstance, "GORAN");
+
+
+	//*******************************************************************************************************//
+
+	//***********************************************TO DO 8*************************************************//
+	//*****************************Oèistiti ekran, nacrtati 4 vodoravne linije ekranu************************//
+	XTft_ClearScreen(&TftInstance);
+
+	// task 3.6
+	DrawHLine(120, 30, 0x00FFFF00, 400);
+	DrawHLine(120, 50, 0x00FFFF00, 400);
+	DrawHLine(120, 70, 0x00FFFF00, 400);
+	DrawHLine(120, 90, 0x00FFFF00, 400);
+	XTft_ClearScreen(&TftInstance);
+
+	// task 4.1.
+	DrawHLine(100, 20, GREEN_COLOR, 180);
+	DrawHLine(100, 40, GREEN_COLOR, 180);
+	DrawHLine(100, 60, GREEN_COLOR, 180);
+	DrawHLine(100, 80, GREEN_COLOR, 180);
+
+	DrawVLine(100, 20, GREEN_COLOR, 60);
+	DrawVLine(160, 20, GREEN_COLOR, 60);
+	DrawVLine(220, 20, GREEN_COLOR, 60);
+	DrawVLine(280, 20, GREEN_COLOR, 60);
+
+	//*******************************************************************************************************//
+
+	return XST_SUCCESS;
+}
+
+void DrawHLine(u32 col, u32 row, u32 color, int length)
+{
+	int i;
+	for(i = 0; i<length; i++)
+	{
+		XTft_SetPixel(&TftInstance, col+i, row, color);
+	}
+}
+
+void DrawVLine(u32 col, u32 row, u32 color, int length)
+{
+	int i;
+	for(i = 0; i<length; i++)
+	{
+		XTft_SetPixel(&TftInstance, col, row+i, color);
+	}
+}
+
+int TftInitialize(u32 TftDeviceId){
+
+	int Status;
+	XTft_Config *TftConfigPtr;
+
+	//***********************************************TO DO 2*************************************************//
+	//******Dohvatiti konfiguraciju VGA suèelja, povratnu vrijednost spremiti u varijablu TftConfigPtr*******//
+	TftConfigPtr = XTft_LookupConfig(TftDeviceId);
+
+	//******************************************************************************************************//
+
+	if (TftConfigPtr == (XTft_Config *)NULL) {
+		return XST_FAILURE;
+	}
+
+	//***********************************************TO DO 3*************************************************//
+	//*************Inicijalizirati VGA kontroler, povratnu vrijednost spremiti u varijablu Status************//
+	Status = XTft_CfgInitialize(&TftInstance, TftConfigPtr, TftConfigPtr->BaseAddress);
+
+	//*******************************************************************************************************//
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//Èekanje da Vsync status bit bude postavljen u 1 kako bi bili sigurni da je
+	//prethodni frame prikazan
+	while (XTft_GetVsyncStatus(&TftInstance) !=
+					XTFT_IESR_VADDRLATCH_STATUS_MASK);
+
+
+	//***********************************************TO DO 4*************************************************//
+	//*********************************Postaviti base adresu Video Memorije**********************************//
+	XTft_SetFrameBaseAddr(&TftInstance, TFT_FRAME_ADDR);
+
+	//*******************************************************************************************************//
+
+	return XST_SUCCESS;
+}
+
+//funkcija piše znak po znak na ekran sve dok ne doðe do null znaka ili kraja stringa
+int TftWriteString(XTft *InstancePtr, const u8 *CharValue)
+{
+
+	while (*CharValue != 0) {
+		XTft_Write(InstancePtr, *CharValue);
+		CharValue++;
+	}
+
+	return XST_SUCCESS;
+}

@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.lv6\:.bss=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.data=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.rodata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.sbss=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.sbss2=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.sdata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.sdata2=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:.text=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:Heap=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.lv6\:Stack=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.lv6\:Stack-size=1024
+eclipse.preferences.version=1

@@ -1,0 +1,269 @@
+#include "xtft.h"
+#include "xparameters.h"
+#include "xps2.h"
+#include "xstatus.h"
+#include "stdio.h"
+
+//***********************************************TO DO 1*************************************************//
+//*******Definirati konstantu TFT_FRAME_ADDR i postaviti ju na Base Address Micron RAM memorije**********//
+#define TFT_FRAME_ADDR XPAR_MICRON_RAM_MEM0_BASEADDR
+
+//******************************************************************************************************//
+
+//***********************************************TO DO 6*************************************************//
+//*******Definirati konstantu TFT_FRAME_ADDR i postaviti ju na Base Address Micron RAM memorije**********//
+#define RED_COLOR 0x00FF0000
+#define GREEN_COLOR 0x0000FF00
+#define BLUE_COLOR 0x000000FF
+#define YELLOW_COLOR 0x00FFFF00
+
+#define BGCOLOR_VALUE 0x0
+#define FGCOLOR_VALUE 0x00FFFFFF
+#define KEYBOARD_ACK		0xFA
+
+//******************************************************************************************************//
+
+/*************************** Prototipi funkcija ******************************/
+int TftInitialize(u32 TftDeviceId);
+int TftWriteString(XTft *InstancePtr, const u8 *CharValue);
+void DrawHLine(u32 col, u32 row, u32 color, int length);
+void DrawVLine(u32 col, u32 row, u32 color, int length);
+
+int Ps2Initialize(u16 Ps2DeviceId);
+int Ps2ReceiveData();
+
+static XTft TftInstance;
+static XPs2 Ps2Inst;
+u8 SendCODE = 0xED;
+u8 RxBuffer;
+
+int main()
+{
+	int Status;
+	u8 Znak;
+
+	Status = TftInitialize(XPAR_VGA_CONTROLLER_DEVICE_ID);
+	if ( Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	int i, j;
+
+		Status = Ps2Initialize(XPAR_PS2_0_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	//***********************************************TO DO 5*************************************************//
+	//*******Oèistiti ekran, postaviti boju pozadine i boju slova i ispisati nekoliko znakova na ekran*******//
+	XTft_ClearScreen(&TftInstance);
+
+	XTft_SetColor(&TftInstance, FGCOLOR_VALUE, BGCOLOR_VALUE);
+
+	XTft_Write(&TftInstance, 'a');
+	XTft_Write(&TftInstance, 'b');
+	XTft_Write(&TftInstance, 'c');
+
+	//*******************************************************************************************************//
+
+	//***********************************************TO DO 7*************************************************//
+	//****************************Oèistiti ekran, ispisati proizvoljan string na ekran***********************//
+	XTft_ClearScreen(&TftInstance);
+	TftWriteString(&TftInstance, "GORAN");
+
+
+	//*******************************************************************************************************//
+
+	//***********************************************TO DO 8*************************************************//
+	//*****************************Oèistiti ekran, nacrtati 4 vodoravne linije ekranu************************//
+	XTft_ClearScreen(&TftInstance);
+	/*
+	// task 3.6
+	DrawHLine(120, 30, 0x00FFFF00, 400);
+	DrawHLine(120, 50, 0x00FFFF00, 400);
+	DrawHLine(120, 70, 0x00FFFF00, 400);
+	DrawHLine(120, 90, 0x00FFFF00, 400);
+	XTft_ClearScreen(&TftInstance);
+
+	// task 4.1.
+	DrawHLine(100, 20, GREEN_COLOR, 180);
+	DrawHLine(100, 40, GREEN_COLOR, 180);
+	DrawHLine(100, 60, GREEN_COLOR, 180);
+	DrawHLine(100, 80, GREEN_COLOR, 180);
+
+	DrawVLine(100, 20, GREEN_COLOR, 60);
+	DrawVLine(160, 20, GREEN_COLOR, 60);
+	DrawVLine(220, 20, GREEN_COLOR, 60);
+	DrawVLine(280, 20, GREEN_COLOR, 60);
+	XTft_ClearScreen(&TftInstance);
+    */
+	// task 4.2.
+
+	print("Receiving data from keyboard:\r\n");
+		while(1){
+
+			//***********************************************TO DO 7*************************************************//
+			//*********************************Primiti 1 byte podataka od tipkovnice********************************//
+
+			Status = Ps2ReceiveData();
+			u32 color = GREEN_COLOR;
+			//******************************************************************************************************//
+
+			if (Status != XST_SUCCESS){
+				return XST_FAILURE;
+				print("Data receiving FAILED!\r\n");
+			}
+			else
+				//***********************************************TO DO 8********************************************//
+				//****************Ispisati vrijednost primljenu od tipkovnice u heksadecimalnom obliku**************//
+
+				if(RxBuffer == 0x16)
+				{
+					XTft_ClearScreen(&TftInstance);
+					DrawHLine(170, 60, color, 300);
+				}
+				if(RxBuffer == 0x1E)
+				{
+					XTft_ClearScreen(&TftInstance);
+					DrawHLine(170, 50, color, 300);
+					DrawHLine(170, 70, color, 300);
+				}
+				if(RxBuffer == 0x26)
+				{
+					XTft_ClearScreen(&TftInstance);
+					DrawHLine(170, 40, color, 300);
+					DrawHLine(170, 60, color, 300);
+					DrawHLine(170, 80, color, 300);
+				}
+				if(RxBuffer == 0x25)
+				{
+					XTft_ClearScreen(&TftInstance);
+					DrawHLine(170, 30, color, 300);
+					DrawHLine(170, 50, color, 300);
+					DrawHLine(170, 70, color, 300);
+					DrawHLine(170, 90, color, 300);
+				}
+
+				xil_printf("KEY_CODE: %x\r\n", RxBuffer);
+				//**************************************************************************************************//
+		}
+
+	//*******************************************************************************************************//
+
+	return XST_SUCCESS;
+}
+
+void DrawHLine(u32 col, u32 row, u32 color, int length)
+{
+	int i;
+	for(i = 0; i<length; i++)
+	{
+		XTft_SetPixel(&TftInstance, col+i, row, color);
+	}
+}
+
+void DrawVLine(u32 col, u32 row, u32 color, int length)
+{
+	int i;
+	for(i = 0; i<length; i++)
+	{
+		XTft_SetPixel(&TftInstance, col, row+i, color);
+	}
+}
+
+int TftInitialize(u32 TftDeviceId){
+
+	int Status;
+	XTft_Config *TftConfigPtr;
+
+	//***********************************************TO DO 2*************************************************//
+	//******Dohvatiti konfiguraciju VGA suèelja, povratnu vrijednost spremiti u varijablu TftConfigPtr*******//
+	TftConfigPtr = XTft_LookupConfig(TftDeviceId);
+
+	//******************************************************************************************************//
+
+	if (TftConfigPtr == (XTft_Config *)NULL) {
+		return XST_FAILURE;
+	}
+
+	//***********************************************TO DO 3*************************************************//
+	//*************Inicijalizirati VGA kontroler, povratnu vrijednost spremiti u varijablu Status************//
+	Status = XTft_CfgInitialize(&TftInstance, TftConfigPtr, TftConfigPtr->BaseAddress);
+
+	//*******************************************************************************************************//
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//Èekanje da Vsync status bit bude postavljen u 1 kako bi bili sigurni da je
+	//prethodni frame prikazan
+	while (XTft_GetVsyncStatus(&TftInstance) !=
+					XTFT_IESR_VADDRLATCH_STATUS_MASK);
+
+
+	//***********************************************TO DO 4*************************************************//
+	//*********************************Postaviti base adresu Video Memorije**********************************//
+	XTft_SetFrameBaseAddr(&TftInstance, TFT_FRAME_ADDR);
+
+	//*******************************************************************************************************//
+
+	return XST_SUCCESS;
+}
+
+//funkcija piše znak po znak na ekran sve dok ne doðe do null znaka ili kraja stringa
+int TftWriteString(XTft *InstancePtr, const u8 *CharValue)
+{
+
+	while (*CharValue != 0) {
+		XTft_Write(InstancePtr, *CharValue);
+		CharValue++;
+	}
+
+	return XST_SUCCESS;
+}
+
+int Ps2Initialize(u16 Ps2DeviceId)
+{
+	XPs2_Config *Ps2ConfigPtr;
+
+	//***********************************************TO DO 1*************************************************//
+	//******Dohvatiti konfiguraciju PS2 suèelja, povratnu vrijednost spremiti u varijablu Ps2ConfigPtr*******//
+
+	Ps2ConfigPtr = XPs2_LookupConfig(Ps2DeviceId);
+	//******************************************************************************************************//
+	if (Ps2ConfigPtr == NULL) {
+		print("Config Lookup FAILED!\r\n");
+		return XST_FAILURE;
+	}
+	else
+		print("Config Lookup SUCCESS!\r\n");
+
+
+	//***********************************************TO DO 2*************************************************//
+	//*************************************Inicijalizirati PS2 kontroler*************************************//
+
+	XPs2_CfgInitialize(&Ps2Inst, Ps2ConfigPtr, Ps2ConfigPtr->BaseAddress);
+	//*******************************************************************************************************//
+
+	print("PS2 Initialize SUCCESS!\r\n");
+	return XST_SUCCESS;
+}
+
+int Ps2ReceiveData(){
+
+	u32 StatusReg;
+	u32 BytesReceived;
+
+	do {
+		StatusReg = XPs2_GetStatus(&Ps2Inst);
+	}while((StatusReg & XPS2_STATUS_RX_FULL) == 0);
+
+	//***********************************************TO DO 5*************************************************//
+	//***Primiti 1 byte podataka putem PS2 sucelja, povratnu vrijdnost spremiti u varijablu BytesReceived****//
+
+	BytesReceived = XPs2_Recv(&Ps2Inst, &RxBuffer, 1);
+	//*******************************************************************************************************//
+
+	return XST_SUCCESS;
+}
