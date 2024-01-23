@@ -1,0 +1,11 @@
+07:40:50 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+
+07:40:51 Build Finished (took 407ms)
+

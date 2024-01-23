@@ -1,0 +1,18 @@
+D:\DRS\LV7_Milicevic_Istvanic\EDK\implementation\system.ngc 1705559086
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_dip_switches_8bits_wrapper.ngc 1705559003
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_push_buttons_4bits_wrapper.ngc 1705559022
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_rs232_uart_1_wrapper.ngc 1705558994
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_clock_generator_0_wrapper.ngc 1705559073
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_proc_sys_reset_0_wrapper.ngc 1705559060
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_microblaze_0_wrapper.ngc 1705559064
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_mb_plb_wrapper.ngc 1705558962
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_ilmb_wrapper.ngc 1705559067
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_dlmb_wrapper.ngc 1705559070
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_dlmb_cntlr_wrapper.ngc 1705558976
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_ilmb_cntlr_wrapper.ngc 1705558981
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_leds_8bits_wrapper.ngc 1705559013
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_micron_ram_wrapper.ngc 1705559039
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_mdm_0_wrapper.ngc 1705559055
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_lmb_bram_wrapper.ngc 1705558986
+D:/DRS/LV7_Milicevic_Istvanic/EDK/implementation/system_mem_bus_mux_0_wrapper.ngc 1705559043
+OK

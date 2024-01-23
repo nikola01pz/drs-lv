@@ -1,0 +1,81 @@
+07:26:47.985 INFO  - Processing command line option -hwspec D:\DRS\LV7_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+07:36:35.360 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\lv7\src\lscript.ld. 
+07:36:35.361 INFO  - Applying linker script to all configurations of project lv7. 
+07:36:35.361 INFO  - Setting rebuild state to true for all configurations of project lv7. 
+07:38:43.002 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\lv7\src\lscript.ld. 
+07:38:43.003 INFO  - Applying linker script to all configurations of project lv7. 
+07:38:43.003 INFO  - Setting rebuild state to true for all configurations of project lv7. 
+07:40:50.441 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\lv7\src\lscript.ld. 
+07:40:50.442 INFO  - Applying linker script to all configurations of project lv7. 
+07:40:50.442 INFO  - Setting rebuild state to true for all configurations of project lv7. 
+07:43:47.906 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\app\src\lscript.ld. 
+07:43:47.906 INFO  - Applying linker script to all configurations of project app. 
+07:43:47.907 INFO  - Setting rebuild state to true for all configurations of project app. 
+07:44:11.373 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+07:48:14.206 INFO  - System reset is completed. 
+07:50:08.146 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+07:50:08.146 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+07:50:08.146 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+07:50:57.389 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+07:51:07.541 INFO  - System reset is completed. 
+07:52:52.268 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+07:53:15.607 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to lock the JTAG cable for exclusive access
+
+ 
+07:53:24.266 WARN  - Terminating existing sessions on processor microblaze_0 
+07:57:42.214 ERROR - Unexpected error while fetching XMD's response:  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.nio.cs.StreamDecoder.readBytes(Unknown Source)
+
+07:57:42.215 ERROR - Zero sized response read from XMD. This indicates a communication error or a programming error. 
+08:00:11.161 INFO  - Processing command line option -hwspec D:\DRS\LV7_Milicevic_Istvanic\EDK\SDK\SDK_Export\hw\system.xml. 
+08:00:30.844 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:00:45.274 INFO  - System reset is completed. 
+08:12:14.949 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:18:54.224 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:20:09.296 INFO  - System reset is completed. 
+08:23:56.332 WARN  - Terminating existing sessions on processor microblaze_0 
+08:24:09.152 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:26:11.832 INFO  - System reset is completed. 
+08:28:18.259 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\app\src\lscript.ld. 
+08:28:18.259 INFO  - Applying linker script to all configurations of project app. 
+08:28:18.260 INFO  - Setting rebuild state to true for all configurations of project app. 
+08:28:35.629 WARN  - Terminating existing sessions on processor microblaze_0 
+08:28:39.096 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:29:00.905 WARN  - Terminating existing sessions on processor microblaze_0 
+08:29:03.878 INFO  - FPGA configured successfully with bitstream "D:/DRS/LV7_Milicevic_Istvanic/SDK/EDK_hw_platform/download.bit" 
+08:57:46.476 WARN  - Terminating existing sessions on processor microblaze_0 
+08:59:32.186 INFO  - Successfully generated D:\DRS\LV7_Milicevic_Istvanic\SDK\app\src\lscript.ld. 
+08:59:32.186 INFO  - Applying linker script to all configurations of project app. 
+08:59:32.186 INFO  - Setting rebuild state to true for all configurations of project app. 
+09:02:20.845 INFO  - System reset is completed. 
+09:03:46.122 INFO  - System reset is completed. 
+09:04:35.292 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+09:48:18.491 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+09:48:18.527 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

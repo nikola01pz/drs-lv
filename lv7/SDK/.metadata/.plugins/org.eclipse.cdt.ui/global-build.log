@@ -1,0 +1,1860 @@
+07:27:16 **** Build of project lv7_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+
+**** Build of configuration Debug for project lv7 ****
+
+Nothing to build for project lv7
+07:27:28 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: lv7.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../lv7_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "lv7.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [lv7.elf] Greška 1
+07:27:31 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./main.o  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:27:31 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:35:56 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:36:35 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./src/main.o  ./main.o  ./src/main.d  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:36:35 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:38:29 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./src/main.o  ./main.o  ./src/main.d  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:38:29 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:38:43 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./src/main.o  ./main.o  ./src/main.d  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:38:43 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:40:17 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./src/main.o  ./main.o  ./src/main.d  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:40:17 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:40:50 **** Clean-only build of configuration Debug for project lv7 ****
+make clean 
+rm -rf  ./src/main.o  ./main.o  ./src/main.d  ./main.d  lv7.elf.size  lv7.elf.elfcheck  lv7.elf
+' '
+07:40:50 **** Auto Build of configuration Debug for project lv7 ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../lv7_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+make: *** Nema propisa za izradu mete `main.o', kojeg traži `lv7.elf'.  Zaustavi.
+07:42:21 **** Build of project app_bsp ****
+make -k all 
+libgen -hw ../EDK_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../EDK_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+07:42:28 **** Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2174	    268	   2084	   4526	   11ae	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+07:42:31 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+07:43:33 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+07:43:33 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+make: *** Nema propisa za izradu mete `../src/lscript.ld', kojeg traži `app.elf'.  Zaustavi.
+07:43:48 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+07:43:48 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+07:44:12 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+07:44:36 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+07:48:13 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:49:16 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:49:47 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:50:00 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:50:22 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+07:50:58 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+07:51:06 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:52:50 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+07:53:14 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:00:10 **** Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:00:11 **** Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:00:31 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:00:43 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:11:59 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:11:59 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:12:04 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o  ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:12:05 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad319.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad319.d" -MT"src/zad319.d" -o "src/zad319.o" "../src/zad319.c"
+'Finished building: ../src/zad319.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad319.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:12:15 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:12:25 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o ./src/zad319.o  ./src/platform.d ./src/zad319.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:12:25 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad319.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad319.d" -MT"src/zad319.d" -o "src/zad319.o" "../src/zad319.c"
+'Finished building: ../src/zad319.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad319.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6090	    324	   2098	   8512	   2140	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:12:28 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o ./src/zad319.o  ./src/platform.d ./src/zad319.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:12:28 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:12:43 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_micron_ram.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_micron_ram.d" -MT"src/lv7_micron_ram.d" -o "src/lv7_micron_ram.o" "../src/lv7_micron_ram.c"
+'Finished building: ../src/lv7_micron_ram.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_micron_ram.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:18:43 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_micron_ram.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_micron_ram.d" -MT"src/lv7_micron_ram.d" -o "src/lv7_micron_ram.o" "../src/lv7_micron_ram.c"
+../src/lv7_micron_ram.c: In function 'main':
+../src/lv7_micron_ram.c:17:6: warning: implicit declaration of function 'Xil_Out32LE' [-Wimplicit-function-declaration]
+../src/lv7_micron_ram.c:26:6: warning: implicit declaration of function 'Xil_In32LE' [-Wimplicit-function-declaration]
+'Finished building: ../src/lv7_micron_ram.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_micron_ram.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5182	    272	   2080	   7534	   1d6e	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:18:55 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:20:08 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:22:37 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/lv7_micron_ram.o ./src/platform.o  ./src/lv7_micron_ram.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+rm: cannot remove `app.elf': Permission denied
+make: [clean] Greška 1 (ignorirana)
+' '
+08:22:37 **** Auto Build of configuration Debug for project app ****
+make all 
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5182	    272	   2080	   7534	   1d6e	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:22:39 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/lv7_micron_ram.o ./src/platform.o  ./src/lv7_micron_ram.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+rm: cannot remove `app.elf': Permission denied
+make: [clean] Greška 1 (ignorirana)
+' '
+08:22:39 **** Auto Build of configuration Debug for project app ****
+make all 
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5182	    272	   2080	   7534	   1d6e	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:22:45 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_uart.d" -MT"src/lv7_uart.d" -o "src/lv7_uart.o" "../src/lv7_uart.c"
+'Finished building: ../src/lv7_uart.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_uart.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:23:50 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_uart.d" -MT"src/lv7_uart.d" -o "src/lv7_uart.o" "../src/lv7_uart.c"
+../src/lv7_uart.c: In function 'main':
+../src/lv7_uart.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/lv7_uart.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_uart.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4942	    272	   2080	   7294	   1c7e	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:24:10 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:26:10 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:27:37 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_uart.d" -MT"src/lv7_uart.d" -o "src/lv7_uart.o" "../src/lv7_uart.c"
+../src/lv7_uart.c: In function 'main':
+../src/lv7_uart.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/lv7_uart.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_uart.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: app.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld.exe: region `ilmb_cntlr_dlmb_cntlr' overflowed by 30528 bytes
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:28:18 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/lv7_uart.o ./src/platform.o  ./src/lv7_uart.d ./src/platform.d  app.elf.size  app.elf.elfcheck  app.elf
+rm: cannot remove `app.elf': Permission denied
+make: [clean] Greška 1 (ignorirana)
+' '
+08:28:18 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_uart.d" -MT"src/lv7_uart.d" -o "src/lv7_uart.o" "../src/lv7_uart.c"
+../src/lv7_uart.c: In function 'main':
+../src/lv7_uart.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/lv7_uart.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_uart.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59664	   1436	   2152	  63252	   f714	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:28:40 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:28:52 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:29:04 **** Auto Build of project app_bsp ****
+make -k all 
+'Finished building libraries'
+08:52:24 **** Auto Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:52:31 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/lv7_uart.o ./src/platform.o ./src/zad1.o  ./src/lv7_uart.d ./src/platform.d ./src/zad1.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:52:31 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/lv7_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/lv7_uart.d" -MT"src/lv7_uart.d" -o "src/lv7_uart.o" "../src/lv7_uart.c"
+../src/lv7_uart.c: In function 'main':
+../src/lv7_uart.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/lv7_uart.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/lv7_uart.o ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/zad1.o: In function `main':
+D:\DRS\LV7_Milicevic_Istvanic\SDK\app\Debug/../src/zad1.c:8: multiple definition of `main'
+./src/lv7_uart.o:D:\DRS\LV7_Milicevic_Istvanic\SDK\app\Debug/../src/lv7_uart.c:8: first defined here
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+08:52:33 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/lv7_uart.o ./src/platform.o ./src/zad1.o  ./src/lv7_uart.d ./src/platform.d ./src/zad1.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:52:34 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:16:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  59664	   1436	   2152	  63252	   f714	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:56:51 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:10:5: error: unknown type name 'XGpio'
+../src/zad1.c:13:5: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+../src/zad1.c:14:5: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+../src/zad1.c:18:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad1.c:19:3: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
+../src/zad1.c:21:3: error: 'address' undeclared (first use in this function)
+../src/zad1.c:21:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/zad1.c:22:3: warning: implicit declaration of function 'Xil_Out32LE' [-Wimplicit-function-declaration]
+../src/zad1.c:22:24: error: 'i' undeclared (first use in this function)
+make: *** [src/zad1.o] Greška 1
+08:57:08 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:10:5: error: unknown type name 'XGpio'
+../src/zad1.c:14:5: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+../src/zad1.c:15:5: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+../src/zad1.c:19:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad1.c:20:3: warning: implicit declaration of function 'XGpio_DiscreteRead' [-Wimplicit-function-declaration]
+../src/zad1.c:23:3: warning: implicit declaration of function 'Xil_Out32LE' [-Wimplicit-function-declaration]
+../src/zad1.c:23:24: error: 'i' undeclared (first use in this function)
+../src/zad1.c:23:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/zad1.o] Greška 1
+08:57:30 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5994	    324	   2092	   8410	   20da	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:57:35 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+08:58:07 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60716	   1488	   2156	  64360	   fb68	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:58:32 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5994	    324	   2092	   8410	   20da	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+08:59:32 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o ./src/zad1.o  ./src/platform.d ./src/zad1.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+08:59:32 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5994	    324	   2092	   8410	   20da	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:02:19 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+09:03:45 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+09:04:34 **** Incremental Build of configuration Debug for project app ****
+make all 
+make: Ništa za napraviti za `all'.
+09:05:59 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6014	    324	   2092	   8430	   20ee	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:13:10 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6014	    324	   2092	   8430	   20ee	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:13:15 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o ./src/zad1.o ./src/zad2.o  ./src/platform.d ./src/zad1.d ./src/zad2.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+09:13:15 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad1.d" -MT"src/zad1.d" -o "src/zad1.o" "../src/zad1.c"
+../src/zad1.c: In function 'main':
+../src/zad1.c:20:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad1.c'
+' '
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad1.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6014	    324	   2092	   8430	   20ee	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:13:19 **** Clean-only build of configuration Debug for project app ****
+make clean 
+rm -rf  ./src/platform.o ./src/zad1.o ./src/zad2.o  ./src/platform.d ./src/zad1.d ./src/zad2.d  app.elf.size  app.elf.elfcheck  app.elf
+' '
+09:13:19 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [app.elf] Greška 1
+09:24:50 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:30:7: error: 'i' undeclared (first use in this function)
+../src/zad2.c:30:7: note: each undeclared identifier is reported only once for each function it appears in
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+make: *** [src/zad2.o] Greška 1
+09:25:01 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:30:3: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/zad2.c:30:3: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+make: *** [src/zad2.o] Greška 1
+09:25:14 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5910	    324	   2098	   8332	   208c	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:25:26 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:25:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5910	    324	   2098	   8332	   208c	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:26:21 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:25:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5910	    324	   2098	   8332	   208c	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:26:58 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:25:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5914	    324	   2092	   8330	   208a	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:29:04 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6106	    324	   2092	   8522	   214a	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:29:42 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6106	    324	   2092	   8522	   214a	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:29:49 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6106	    324	   2092	   8522	   214a	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:31:21 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6094	    324	   2092	   8510	   213e	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:32:49 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:24:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+../src/zad2.c:25:8: warning: 'temp' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6114	    324	   2092	   8530	   2152	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:34:57 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:23:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:30:22: error: 'temp' undeclared (first use in this function)
+../src/zad2.c:30:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+make: *** [src/zad2.o] Greška 1
+09:35:10 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:23:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6030	    324	   2092	   8446	   20fe	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:35:17 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:23:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6030	    324	   2092	   8446	   20fe	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:36:26 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:23:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/zad2.c:34:29: error: subscripted value is neither array nor pointer nor vector
+../src/zad2.c:12:9: warning: unused variable 'switchesValue' [-Wunused-variable]
+make: *** [src/zad2.o] Greška 1
+09:41:58 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5322	    272	   2086	   7680	   1e00	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:42:53 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5322	    272	   2086	   7680	   1e00	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:43:44 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5318	    272	   2080	   7670	   1df6	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:44:04 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5322	    272	   2086	   7680	   1e00	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:44:08 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5318	    272	   2080	   7670	   1df6	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:45:02 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5366	    272	   2080	   7718	   1e26	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:46:15 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5366	    272	   2080	   7718	   1e26	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:46:19 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5318	    272	   2080	   7670	   1df6	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
+09:47:11 **** Auto Build of configuration Debug for project app ****
+make all 
+'Building file: ../src/zad2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../app_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/zad2.d" -MT"src/zad2.d" -o "src/zad2.o" "../src/zad2.c"
+../src/zad2.c: In function 'main':
+../src/zad2.c:15:3: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/zad2.c'
+' '
+'Building target: app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "app.elf"  ./src/platform.o ./src/zad2.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5322	    272	   2086	   7680	   1e00	app.elf
+'Finished building: app.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck app.elf -hw ../../EDK_hw_platform/system.xml -pe microblaze_0  |tee "app.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../EDK_hw_platform/system.xml -pe microblaze_0
+app.elf 
+
+ELF file	: app.elf
+elfcheck passed.
+'Finished building: app.elf.elfcheck'
+' '
